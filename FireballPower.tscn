@@ -1,0 +1,40 @@
+[gd_scene load_steps=10 format=2]
+
+[ext_resource path="res://Scripts/FireballPower.gd" type="Script" id=1]
+[ext_resource path="res://Sprites/fireball_power/efecto_fuego_00008.png" type="Texture" id=2]
+[ext_resource path="res://Sprites/fireball_power/efecto_fuego_00009.png" type="Texture" id=3]
+[ext_resource path="res://Sprites/fireball_power/efecto_fuego_00010.png" type="Texture" id=4]
+[ext_resource path="res://Sprites/fireball_power/efecto_fuego_00011.png" type="Texture" id=5]
+[ext_resource path="res://Sprites/fireball_power/efecto_fuego_00012.png" type="Texture" id=6]
+[ext_resource path="res://Sprites/fireball_power/efecto_fuego_00013.png" type="Texture" id=7]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 2 ), ExtResource( 3 ), ExtResource( 4 ), ExtResource( 5 ), ExtResource( 6 ), ExtResource( 7 ) ],
+"loop": true,
+"name": "shoot",
+"speed": 5.0
+} ]
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 200, 48 )
+
+[node name="FireballPower" type="Area2D"]
+scale = Vector2( 0.1, 0.1 )
+script = ExtResource( 1 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+frames = SubResource( 1 )
+animation = "shoot"
+frame = 1
+playing = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( -2, 0 )
+shape = SubResource( 2 )
+
+[node name="VisibilityNotifier2D" type="VisibilityNotifier2D" parent="."]
+position = Vector2( -5, 3.8147e-006 )
+scale = Vector2( 20.5, 5 )
+[connection signal="body_entered" from="." to="." method="_on_FireballPower_body_entered"]
+[connection signal="screen_exited" from="VisibilityNotifier2D" to="." method="_on_VisibilityNotifier2D_screen_exited"]
