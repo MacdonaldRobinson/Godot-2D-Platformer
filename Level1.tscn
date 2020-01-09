@@ -26,7 +26,7 @@ position = Vector2( 1088, 688 )
 position = Vector2( 1072, 528 )
 
 [node name="Enemy3" parent="." instance=ExtResource( 3 )]
-position = Vector2( 336, 672 )
+position = Vector2( 880, 678 )
 speed = 300
 hp = 5
 size = Vector2( 0.2, 0.2 )

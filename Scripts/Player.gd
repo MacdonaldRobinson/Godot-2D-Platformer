@@ -13,6 +13,9 @@ var is_dead = false;
 
 var fireball_power = 1
 
+func read():
+	$ShootSound.loop = false
+
 func _physics_process(delta):
 	
 	if is_dead == false:	
@@ -53,9 +56,11 @@ func _physics_process(delta):
 				motion.y -= JUMP_HEIGHT	
 				
 				
-		if Input.is_action_just_pressed("ui_focus_next"):
-			var fireball = FIREBALL.instance()
+		if Input.is_action_just_pressed("ui_focus_next"):			
+			$ShootSound.play()
 			
+			var fireball = FIREBALL.instance()
+						
 			if fireball_power == 1:
 				fireball = FIREBALL.instance()
 			elif fireball_power == 2: 
@@ -66,7 +71,8 @@ func _physics_process(delta):
 			else:
 				fireball.set_fireball_direction(-1)
 			
-			get_parent().add_child(fireball)
+			get_parent().add_child(fireball)			
+			
 			fireball.position = $Position2D.global_position
 			
 		motion = move_and_slide(motion, Vector2.UP);
@@ -80,8 +86,6 @@ func dead():
 	is_dead = true
 	motion = Vector2(0, 0)
 	$AnimatedSprite.play("Dead")
-	$Popup/Label.text = "Its Over!"
-	$Popup.popup(Rect2( Vector2(self.position.x , self.position.y) , self.scale))
 	
 	self.translate(Vector2(0, -10))
 	if $CollisionShape2D != null:

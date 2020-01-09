@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=2]
+[gd_scene load_steps=16 format=2]
 
 [ext_resource path="res://Scripts/Player.gd" type="Script" id=1]
 [ext_resource path="res://Sprites/Player/Jump3.png" type="Texture" id=2]
@@ -11,6 +11,8 @@
 [ext_resource path="res://Sprites/Player/Run4.png" type="Texture" id=9]
 [ext_resource path="res://Sprites/Player/Run7.png" type="Texture" id=10]
 [ext_resource path="res://Sprites/Player/Idle0.png" type="Texture" id=11]
+[ext_resource path="res://BackgroundMusic.tscn" type="PackedScene" id=12]
+[ext_resource path="res://ShootSound.tscn" type="PackedScene" id=13]
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
@@ -78,15 +80,9 @@ editor_draw_limits = true
 [node name="Timer" type="Timer" parent="."]
 one_shot = true
 
-[node name="Popup" type="PopupPanel" parent="."]
-visible = true
-margin_right = 89.0
-margin_bottom = 22.0
+[node name="BackgroundMusic" parent="." instance=ExtResource( 12 )]
+volume_db = -5.0
 
-[node name="Label" type="Label" parent="Popup"]
-margin_left = 4.0
-margin_top = 4.0
-margin_right = 85.0
-margin_bottom = 18.0
-text = "This is a test"
+[node name="ShootSound" parent="." instance=ExtResource( 13 )]
+autoplay = false
 [connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
