@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://GroundTileSet.tres" type="TileSet" id=1]
 [ext_resource path="res://Player.tscn" type="PackedScene" id=2]
@@ -7,6 +7,7 @@
 [ext_resource path="res://ScreenShake.tscn" type="PackedScene" id=5]
 [ext_resource path="res://ChangeStage.tscn" type="PackedScene" id=6]
 [ext_resource path="res://PowerUp.tscn" type="PackedScene" id=7]
+[ext_resource path="res://StatScreen.tscn" type="PackedScene" id=8]
 
 [node name="Level2" type="Node2D"]
 
@@ -64,3 +65,5 @@ target_stage = "res://Level1.tscn"
 
 [node name="PowerUp" parent="." instance=ExtResource( 7 )]
 position = Vector2( 832, 678 )
+
+[node name="StatScreen" parent="." instance=ExtResource( 8 )]

@@ -92,6 +92,7 @@ func dead():
 		$CollisionShape2D.queue_free()
 		
 	$Timer.start()	
+	Globals.enemy_kill_count = 0
 
 func _on_Timer_timeout():
 	get_tree().change_scene("res://TitleScreen.tscn")

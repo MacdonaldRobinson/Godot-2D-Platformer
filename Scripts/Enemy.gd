@@ -23,7 +23,9 @@ func dead(damage):
 		velocity = Vector2(0, 0);
 		$AnimatedSprite.play("Dead")
 		$CollisionShape2D.queue_free()
-		$Timer.start()
+		$Timer.start()		
+		Globals.enemy_kill_count += 1
+		
 		if scale > Vector2(0.1, 0.1):
 			get_parent().get_node("ScreenShake").screen_shake(1, 10, 100)
 

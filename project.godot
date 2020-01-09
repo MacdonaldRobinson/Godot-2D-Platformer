@@ -19,6 +19,10 @@ config/name="2d-platformer"
 run/main_scene="res://TitleScreen.tscn"
 config/icon="res://icon.png"
 
+[autoload]
+
+Globals="*res://Scripts/Globals.gd"
+
 [display]
 
 window/size/width=1280
