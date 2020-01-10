@@ -13,6 +13,8 @@ var is_dead = false;
 
 var fireball_power = 1
 
+signal taking_damage
+
 func read():
 	$ShootSound.loop = false
 
@@ -77,10 +79,19 @@ func _physics_process(delta):
 			
 		motion = move_and_slide(motion, Vector2.UP);
 		
-		if get_slide_count() > 0:
-			for i in range(get_slide_count()):
-				if "Enemy" in get_slide_collision(i).collider.name:
-					dead()
+#		if get_slide_count() > 0:
+#			for i in range(get_slide_count()):
+#				if "Enemy" in get_slide_collision(i).collider.name:
+#					damage()
+	
+func damage():	
+	print(Globals.player_health)
+	if Globals.player_health == 1:
+		dead()
+	else:
+		$AnimationPlayer.play("TakingDamage")
+		Globals.player_health -= 1
+		emit_signal("taking_damage")
 	
 func dead():
 	is_dead = true

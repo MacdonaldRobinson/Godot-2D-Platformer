@@ -81,3 +81,4 @@ target_stage = "res://Level2.tscn"
 position = Vector2( 48, 681.95 )
 
 [node name="StatScreen" parent="." instance=ExtResource( 9 )]
+[connection signal="taking_damage" from="Player" to="StatScreen" method="_on_Player_taking_damage"]
