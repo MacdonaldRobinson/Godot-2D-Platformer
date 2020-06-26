@@ -5,7 +5,7 @@ This project is a good start for a 2D Platformer game
 
 You can checkout the game here: https://macdonaldrobinson.github.io/Godot-2D-Platformer/Exports/2d-platformer.html
 
-Instuctions:
+Instructions:
 - Arrow for movement
   - Up arrow for Jump
 - Tab for shooting
