@@ -9,3 +9,20 @@ Instructions:
 - Arrow for movement
   - Up arrow for Jump
 - Tab for shooting
+
+## Splash Screen
+![image](https://github.com/MacdonaldRobinson/Godot-2D-Platformer/assets/18366446/f5cc9a8c-b416-4e77-87b1-2813cbaff9c6)
+
+# Multiple Levels
+- Parallax background
+- Player controller and shoot logic
+- Power ups
+- Enemies
+- Platforms
+- Portal
+
+## Level 1
+![image](https://github.com/MacdonaldRobinson/Godot-2D-Platformer/assets/18366446/486788b6-3614-4689-8c8c-dcbb85203ded)
+
+## Level 2
+![image](https://github.com/MacdonaldRobinson/Godot-2D-Platformer/assets/18366446/0e373921-60ce-459a-b44b-0b576a76a03b)
