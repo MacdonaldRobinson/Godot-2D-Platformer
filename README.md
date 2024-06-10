@@ -5,6 +5,15 @@ This project is a good start for a 2D Platformer game
 
 You can checkout the game here: https://macdonaldrobinson.github.io/Godot-2D-Platformer/Exports/2d-platformer.html
 
+## Multiple Levels
+- Parallax background
+- Player controller and shoot logic
+- Power ups
+- Enemies
+- Platforms
+- Portal
+- Music
+
 Instructions:
 - Arrow for movement
   - Up arrow for Jump
@@ -13,13 +22,6 @@ Instructions:
 ## Splash Screen
 ![image](https://github.com/MacdonaldRobinson/Godot-2D-Platformer/assets/18366446/f5cc9a8c-b416-4e77-87b1-2813cbaff9c6)
 
-# Multiple Levels
-- Parallax background
-- Player controller and shoot logic
-- Power ups
-- Enemies
-- Platforms
-- Portal
 
 ## Level 1
 ![image](https://github.com/MacdonaldRobinson/Godot-2D-Platformer/assets/18366446/486788b6-3614-4689-8c8c-dcbb85203ded)
